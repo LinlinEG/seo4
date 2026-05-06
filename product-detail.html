@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>產品詳情 | Aura Gent</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .product-detail-container { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+        @media (max-width: 768px) { .product-detail-container { grid-template-columns: 1fr; } }
+        .detail-image { width: 100%; border-radius: 8px; }
+        .detail-info h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .detail-info .price { font-size: 1.5rem; color: var(--accent); font-weight: 700; margin-bottom: 2rem; }
+        .detail-info p { margin-bottom: 2rem; color: var(--text-muted); }
+    </style>
+</head>
+<body>
+    <header><div class="logo">Aura Gent</div><nav class="nav-links"><a href="index.html">首頁</a><a href="about.html">公司簡介</a><a href="casual.html">休閒服飾</a><a href="formal.html">正式服飾</a><a href="jewelry.html">飾品</a><a href="accessories.html">配件</a><a href="others.html">其它類</a><a href="contact.html">聯絡我們</a></nav></header>
+    <div class="container">
+        <div class="product-detail-container">
+            <img src="https://images.unsplash.com/photo-1516257984877-a03a80ce0a45?auto=format&fit=crop&q=80&w=800" class="detail-image" id="prod-img">
+            <div class="detail-info">
+                <h1 id="prod-name">精選產品</h1>
+                <p class="price" id="prod-price">NT$ 3,200</p>
+                <p id="prod-desc">這是一款專為現代紳士設計的高品質單品。採用頂級面料，注重每一個細節的剪裁，確保您在任何場合都能展現最佳狀態。透氣舒適，且具備極佳的耐穿性，是您衣櫥中不可或缺的經典之作。</p>
+                <div style="margin-bottom: 2rem;">
+                    <label>尺寸：</label>
+                    <select style="padding: 0.5rem; margin-right: 1rem;"><option>S</option><option>M</option><option>L</option><option>XL</option></select>
+                </div>
+                <button class="btn" style="width: 100%;">加入購物車</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Simple script to mock product data based on ID
+        const urlParams = new URLSearchParams(window.location.search);
+        const id = urlParams.get('id');
+        if(id) {
+            // Logic to change content could go here
+            console.log('Viewing product:', id);
+        }
+    </script>
+    <footer><p>&copy; 2026 Aura Gent. All Rights Reserved.</p></footer>
+</body>
+</html>
